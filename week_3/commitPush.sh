@@ -11,8 +11,15 @@ else
     git commit -m "Auto-commit on $(date)"
     output=$(git status --porcelain)
     if [ "$output" = "" ]; then
-        echo "Succesfull commit"
+        echo "Successful commit"
     else
         echo "Error: commit failed"
     fi
     git push origin master
+    pushOutput=$(git push origin master)
+    if [ "$pushOutput" = "Everything up-to-date" ]; then
+        echo "Successful push"
+    else
+        echo "Error: push failed"
+    fi
+fi
