@@ -16,8 +16,7 @@ else
         echo "Error: commit failed"
     fi
     git push origin master
-    pushOutput=$(git push origin master)
-    if [ "$pushOutput" = "Everything up-to-date" ]; then
+    if git push origin master; then
         echo "Successful push"
     else
         echo "Error: push failed"
