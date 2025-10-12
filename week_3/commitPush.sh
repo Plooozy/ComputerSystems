@@ -15,7 +15,6 @@ else
     else
         echo "Error: commit failed"
     fi
-    git push origin master
     if git push origin master; then
         echo "Successful push"
     else
