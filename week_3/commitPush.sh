@@ -15,9 +15,10 @@ else
     else
         echo "Error: commit failed"
     fi
-    if git push origin master; then
+    # Runs git push and checks if it succeeded
+    if git push origin master; then # If push command exits with status 0 - means success, code runs "then"
         echo "Successful push"
-    else
+    else                            # If push command exits with non-zero status - means failure, code runs "else"
         echo "Error: push failed"
     fi
 fi
