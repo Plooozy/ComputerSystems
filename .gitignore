@@ -1,0 +1,4 @@
+commitPush.sh
+.idea/
+*.pyc
+.pytest_cache
